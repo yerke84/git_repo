@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:portlet="http://www.ibm.com/wps/c2a" xmlns:tns="http://typik.bitik.project.TYPIK.BITIK.PROJECT.Monument/" xmlns:tns0="http://typik.bitik.project" name="TYPIK_BITIK_PROJECT_Monument_Service" targetNamespace="http://typik.bitik.project.TYPIK.BITIK.PROJECT.Monument/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://typik.bitik.project">
+      <xsd:simpleType name="MyDatatypeOID">
+        <xsd:restriction base="xsd:string"/>
+      </xsd:simpleType>
+    </xsd:schema>
+  </types>
+  <message name="MyDatatypeOID_Request">
+    <part name="MyDatatypeOID_Input" type="tns0:MyDatatypeOID"/>
+  </message>
+  <portType name="TYPIK_BITIK_PROJECT_Monument_Service">
+    <operation name="TYPIK_BITIK_PROJECT_Monument">
+      <input message="tns:MyDatatypeOID_Request"/>
+    </operation>
+  </portType>
+  <binding name="TYPIK_BITIK_PROJECT_Monument_Binding" type="tns:TYPIK_BITIK_PROJECT_Monument_Service">
+    <portlet:binding/>
+    <operation name="TYPIK_BITIK_PROJECT_Monument">
+      <portlet:action actionNameParameter="OID_ACTION_NAME_PARAM" caption="Action.Caption" name="OID_TargetAction" type="standard"/>
+      <input>
+        <portlet:param boundTo="request-parameter" caption="Property.Caption" name="inputOID" partname="MyDatatypeOID_Input"/>
+      </input>
+    </operation>
+  </binding>
+</definitions>

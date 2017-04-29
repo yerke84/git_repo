@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<types>
+
+	<type	tid="1"		kz="Орхон"				ru="Орхонские"				en="Orhon"/>
+	<type	tid="2"		kz="Енисей"				ru="Енисейские"				en="Yenisei"/>
+	<type	tid="3"		kz="Талас"				ru="Таласские"				en="Talas"/>
+	<type	tid="4"		kz="Тұрпан"				ru="Турфанские"				en="Turfan"/>
+	<type	tid="5"		kz="Қазақстан"			ru="Казахстанские"			en="Kazakstan"/>
+	<type	tid="10"	kz="Алтай"				ru="Алтайские"				en="Altai"/>
+	<type	tid="11"	kz="Ферғана"			ru="Ферганские"				en="Fergana"/>
+
+</types>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" id="typik_bitik_project.TYPIK_BITIK_PROJECTPortlet.1302b24832">
+
+	<portlet>
+		<description>TYPIK_BITIK_PROJECT_Language_Dealer</description>
+		<portlet-name>TYPIK_BITIK_PROJECT_Language_Dealer</portlet-name>
+		<display-name>TYPIK_BITIK_PROJECT_Language_Dealer</display-name>
+		<display-name xml:lang="ru">TYPIK_BITIK_PROJECT_Language_Dealer</display-name>
+		<portlet-class>typik_bitik_project.TYPIK_BITIK_PROJECT_Language_DealerPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>			
+		</supports>
+		<supported-locale>ru</supported-locale>
+		<resource-bundle>typik_bitik_project.nl.TYPIK_BITIK_PROJECT_Language_DealerPortletResource</resource-bundle>
+		<portlet-info>
+			<title>TYPIK_BITIK_PROJECT_Language_Dealer</title>
+			<short-title>TYPIK_BITIK_PROJECT_Language_Dealer</short-title>
+			<keywords>TYPIK_BITIK_PROJECT_Language_Dealer</keywords>
+		</portlet-info>
+	</portlet>
+		
+	<portlet>
+		<description>TYPIK_BITIK_PROJECT_Types_Menu</description>
+		<portlet-name>TYPIK_BITIK_PROJECT_Types_Menu</portlet-name>
+		<display-name>TYPIK_BITIK_PROJECT_Types_Menu</display-name>
+		<display-name xml:lang="ru">TYPIK_BITIK_PROJECT_Types_Menu</display-name>
+		<display-name xml:lang="en">TYPIK_BITIK_PROJECT_Types_Menu</display-name>
+		<display-name xml:lang="kk">TYPIK_BITIK_PROJECT_Types_Menu</display-name>		
+		<portlet-class>typik_bitik_project.TYPIK_BITIK_PROJECT_Types_MenuPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>						
+		<supported-locale>en</supported-locale>
+		<supported-locale>ru</supported-locale>
+		<supported-locale>kk</supported-locale>		
+		<resource-bundle>typik_bitik_project.nl.TYPIK_BITIK_PROJECT_Types_MenuPortletResource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>com.ibm.portal.propertybroker.wsdllocation</name>
+				<value>/wsdl/TYPIK_BITIK_PROJECT_Types_Menu.wsdl</value>
+				<read-only>true</read-only>
+			</preference>
+			<preference>
+				<name>com.ibm.portal.pagecontext.enable</name>
+				<value>true</value>
+				<read-only>true</read-only>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+	
+	<portlet>
+		<description>TYPIK_BITIK_PROJECT_Kinds_Menu</description>
+		<portlet-name>TYPIK_BITIK_PROJECT_Kinds_Menu</portlet-name>
+		<display-name>TYPIK_BITIK_PROJECT_Kinds_Menu</display-name>
+		<display-name xml:lang="ru">TYPIK_BITIK_PROJECT_Kinds_Menu</display-name>
+		<display-name xml:lang="en">TYPIK_BITIK_PROJECT_Kinds_Menu</display-name>
+		<display-name xml:lang="kk">TYPIK_BITIK_PROJECT_Kinds_Menu</display-name>
+		<portlet-class>typik_bitik_project.TYPIK_BITIK_PROJECT_Kinds_MenuPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<supported-locale>ru</supported-locale>
+		<supported-locale>kk</supported-locale>
+		<resource-bundle>typik_bitik_project.nl.TYPIK_BITIK_PROJECT_Kinds_MenuPortletResource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>com.ibm.portal.propertybroker.wsdllocation</name>
+				<value>/wsdl/TYPIK_BITIK_PROJECT_Kinds_Menu.wsdl</value>
+				<read-only>true</read-only>
+			</preference>
+			<preference>
+				<name>com.ibm.portal.pagecontext.enable</name>
+				<value>true</value>
+				<read-only>true</read-only>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+	
+	<portlet>
+		<description>TYPIK_BITIK_PROJECT_Monument</description>	
+		<portlet-name>TYPIK_BITIK_PROJECT_Monument</portlet-name>
+		<display-name>TYPIK_BITIK_PROJECT_Monument</display-name>
+		<display-name xml:lang="ru">TYPIK_BITIK_PROJECT_Monument</display-name>
+		<display-name xml:lang="en">TYPIK_BITIK_PROJECT_Monument</display-name>
+		<display-name xml:lang="kk">TYPIK_BITIK_PROJECT_Monument</display-name>
+		<portlet-class>typik_bitik_project.TYPIK_BITIK_PROJECT_MonumentPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<supported-locale>ru</supported-locale>
+		<supported-locale>kk</supported-locale>
+		<resource-bundle>typik_bitik_project.nl.TYPIK_BITIK_PROJECT_MonumentPortletResource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>com.ibm.portal.propertybroker.wsdllocation</name>
+				<value>/wsdl/TYPIK_BITIK_PROJECT_Monument.wsdl</value>
+				<read-only>true</read-only>
+			</preference>
+			<preference>
+				<name>com.ibm.portal.pagecontext.enable</name>
+				<value>true</value>
+				<read-only>true</read-only>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+	
+</portlet-app>

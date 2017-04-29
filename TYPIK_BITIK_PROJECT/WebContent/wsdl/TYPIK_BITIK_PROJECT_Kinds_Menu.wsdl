@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:portlet="http://www.ibm.com/wps/c2a" xmlns:tns="http://typik.bitik.project.TYPIK.BITIK.PROJECT.Kinds.Menu/" xmlns:tns0="http://typik.bitik.project" name="TYPIK_BITIK_PROJECT_Kinds_Menu_Service" targetNamespace="http://typik.bitik.project.TYPIK.BITIK.PROJECT.Kinds.Menu/">
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://typik.bitik.project">
+      <xsd:simpleType name="MyDatatype">
+        <xsd:restriction base="xsd:string"/>
+      </xsd:simpleType>
+            <xsd:simpleType name="MyDatatypeOID">
+        <xsd:restriction base="xsd:string"/>
+      </xsd:simpleType>
+        </xsd:schema>
+  </types>
+  <message name="MyDatatype_Request">
+    <part name="MyDatatype_Input" type="tns0:MyDatatype"/>
+  </message>
+    <message name="SourceAction_OID_Response">
+    <part name="MyDatatypeOID_Output" type="tns0:MyDatatypeOID"/>
+  </message>
+    <portType name="TYPIK_BITIK_PROJECT_Kinds_Menu_Service">
+    <operation name="TYPIK_BITIK_PROJECT_Kinds_Menu">
+      <input message="tns:MyDatatype_Request"/>
+    </operation>
+        <operation name="TYPIK_BITIK_PROJECT_Kinds_Menu0">
+      <output message="tns:SourceAction_OID_Response"/>
+    </operation>
+    </portType>
+  <binding name="TYPIK_BITIK_PROJECT_Kinds_Menu_Binding" type="tns:TYPIK_BITIK_PROJECT_Kinds_Menu_Service">
+    <portlet:binding/>
+    <operation name="TYPIK_BITIK_PROJECT_Kinds_Menu">
+      <portlet:action actionNameParameter="ACTION_NAME_PARAM" caption="Action.Caption" name="TargetAction" type="standard"/>
+      <input>
+        <portlet:param boundTo="request-parameter" caption="Property.Caption" name="inputProperty" partname="MyDatatype_Input"/>
+      </input>
+    </operation>
+        <operation name="TYPIK_BITIK_PROJECT_Kinds_Menu0">
+      <portlet:action actionNameParameter="ACTION_NAME_PARAM_OID" caption="Action.Caption1" name="SourceAction_OID" type="standard"/>
+      <output>
+        <portlet:param boundTo="request-attribute" caption="Property.Caption1" name="outputOID" partname="MyDatatypeOID_Output"/>
+      </output>
+    </operation>
+    </binding>
+</definitions>
