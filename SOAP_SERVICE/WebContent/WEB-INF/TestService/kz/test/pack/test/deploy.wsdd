@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TestService WSDL service -->
+
+  <service name="Test" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://test.pack.test.kz"/>
+      <parameter name="wsdlServiceElement" value="TestService"/>
+      <parameter name="schemaQualified" value="http://data.pack.test.kz,http://test.pack.test.kz"/>
+      <parameter name="wsdlServicePort" value="Test"/>
+      <parameter name="className" value="kz.test.pack.test.Test"/>
+      <parameter name="wsdlPortType" value="Test"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://test.pack.test.kz" xmlns:retNS="http://test.pack.test.kz" xmlns:rtns="http://data.pack.test.kz" name="testMethod" qname="operNS:testMethod" returnQName="retNS:testMethodReturn" returnType="rtns:User" soapAction="">
+        <parameter xmlns:pns="http://test.pack.test.kz" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:argname" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="testMethod"/>
+
+      <typeMapping xmlns:ns="http://data.pack.test.kz" qname="ns:User" type="java:kz.test.pack.data.User" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://data.pack.test.kz" qname="ns:Address" type="java:kz.test.pack.data.Address" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://data.pack.test.kz" qname="ns:UserAddresses" type="java:kz.test.pack.data.UserAddresses" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://test.pack.test.kz" xmlns:cmp-ns="http://data.pack.test.kz" qname="ns:ArrayOf_tns1_Address" type="java:kz.test.pack.data.Address[]" innerType="cmp-ns:Address" encodingStyle=""/>
+  </service>
+</deployment>

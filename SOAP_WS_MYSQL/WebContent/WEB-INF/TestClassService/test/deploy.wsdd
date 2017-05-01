@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TestClassService WSDL service -->
+
+  <service name="TestClass" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://test"/>
+      <parameter name="wsdlServiceElement" value="TestClassService"/>
+      <parameter name="schemaQualified" value="http://data,http://test"/>
+      <parameter name="wsdlServicePort" value="TestClass"/>
+      <parameter name="className" value="test.TestClass"/>
+      <parameter name="wsdlPortType" value="TestClass"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://test" xmlns:retNS="http://test" xmlns:rtns="http://data" name="getDepartment" qname="operNS:getDepartment" returnQName="retNS:getDepartmentReturn" returnType="rtns:DepartmentClass" soapAction="">
+        <parameter xmlns:pns="http://test" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dName" type="tns:string"/>
+        <parameter xmlns:pns="http://test" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dId" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="getDepartment"/>
+
+      <typeMapping xmlns:ns="http://data" qname="ns:DepartmentClass" type="java:data.DepartmentClass" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://test" xmlns:cmp-ns="http://data" qname="ns:ArrayOf_tns1_PersonClass" type="java:data.PersonClass[]" innerType="cmp-ns:PersonClass" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://data" qname="ns:PersonClass" type="java:data.PersonClass" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>
