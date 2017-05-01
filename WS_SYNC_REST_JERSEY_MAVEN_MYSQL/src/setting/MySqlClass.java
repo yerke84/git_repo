@@ -11,7 +11,7 @@ public class MySqlClass {
 	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	private static final String DB_URL = "jdbc:mysql://localhost/mysql";
 	private static final String USER = "root";
-	private static final String PASS = "enigma84";
+	private static final String PASS = "*";
 	private Connection conn;
 
 	public MySqlClass() throws SQLException, ClassNotFoundException {
