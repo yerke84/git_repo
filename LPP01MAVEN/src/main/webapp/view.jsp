@@ -18,4 +18,4 @@
 
 <portlet:defineObjects />
 
-This is the <b>LPP03M</b>.
+I This is the <b>LPP01MAVEN</b>.

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="LPP03M-portlet">
+    <wb-module deploy-name="LPP01MAVEN-portlet">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="context-root" value="LPP03M"/>
-        <property name="java-output-path" value="/LPP03M/target/classes"/>
+        <property name="context-root" value="LPP01MAVEN"/>
+        <property name="java-output-path" value="/LPP01MAVEN/target/classes"/>
     </wb-module>
 </project-modules>

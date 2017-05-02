@@ -3,7 +3,7 @@
 
 <display>
 	<category name="category.sample">
-		<portlet id="LPP03M" />
-		<portlet id="new-portlet01"></portlet>
+		<!-- <portlet id="LPP01MAVEN" />-->
+		<portlet id="first"></portlet>
 	</category>
 </display>

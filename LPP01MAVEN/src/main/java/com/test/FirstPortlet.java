@@ -12,21 +12,21 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 /**
- * Portlet implementation class NewPortlet01
+ * Portlet implementation class FirstPortlet
  */
-public class NewPortlet01 extends GenericPortlet {
+public class FirstPortlet extends GenericPortlet {
 
-	protected String viewTemplate;
-	private static Log _log = LogFactoryUtil.getLog(NewPortlet01.class);
+	private static Log _log = LogFactoryUtil.getLog(FirstPortlet.class);
+	protected String view;
 
 	public void init() {
-		viewTemplate = getInitParameter("view-jsp");
+		view = getInitParameter("view-jsp");
 	}
 
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 			throws IOException, PortletException {
 
-		include(viewTemplate, renderRequest, renderResponse);
+		include(view, renderRequest, renderResponse);
 	}
 
 	protected void include(String path, RenderRequest renderRequest, RenderResponse renderResponse)

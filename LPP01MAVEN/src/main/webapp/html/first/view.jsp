@@ -2,4 +2,4 @@
 
 <portlet:defineObjects />
 
-This is the <b>New Portlet01</b> portlet in View mode.
+II This is the <b>First</b> portlet in View mode.
