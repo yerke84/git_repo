@@ -3,8 +3,7 @@
 
 <display>
 	<category name="category.sample">
-		<!-- <portlet id="LPP01MAVEN" /> -->
-		<portlet id="first"></portlet>
+		<!-- <portlet id="LPP01MAVEN" /> <portlet id="first"></portlet> -->
 		<portlet id="mvc-portlet01"></portlet>
 	</category>
 </display>
