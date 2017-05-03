@@ -13,48 +13,22 @@
 		<security-role-ref> <role-name>guest</role-name> </security-role-ref> <security-role-ref> 
 		<role-name>power-user</role-name> </security-role-ref> <security-role-ref> 
 		<role-name>user</role-name> </security-role-ref> </portlet> -->
-	<!-- <portlet>
-		<portlet-name>first</portlet-name>
-		<display-name>First</display-name>
-		<portlet-class>com.test.FirstPortlet</portlet-class>
-		<init-param>
-			<name>view-jsp</name>
-			<value>/html/first/view.jsp</value>
-		</init-param>
-		<init-param>
-			<name>edit-jsp</name>
-			<value>/html/first/edit.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-			<portlet-mode>view</portlet-mode>
-			<portlet-mode>edit</portlet-mode>
-		</supports>
-		<supported-locale>ru</supported-locale>
-		<resource-bundle>content.Language</resource-bundle>
-		<portlet-info>
-			<title>First Title</title>
-			<short-title>First Short Title</short-title>
-			<keywords></keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>-->
+	<!-- <portlet> <portlet-name>first</portlet-name> <display-name>First</display-name> 
+		<portlet-class>com.test.FirstPortlet</portlet-class> <init-param> <name>view-jsp</name> 
+		<value>/html/first/view.jsp</value> </init-param> <init-param> <name>edit-jsp</name> 
+		<value>/html/first/edit.jsp</value> </init-param> <expiration-cache>0</expiration-cache> 
+		<supports> <mime-type>text/html</mime-type> <portlet-mode>view</portlet-mode> 
+		<portlet-mode>edit</portlet-mode> </supports> <supported-locale>ru</supported-locale> 
+		<resource-bundle>content.Language</resource-bundle> <portlet-info> <title>First 
+		Title</title> <short-title>First Short Title</short-title> <keywords></keywords> 
+		</portlet-info> <security-role-ref> <role-name>administrator</role-name> 
+		</security-role-ref> <security-role-ref> <role-name>guest</role-name> </security-role-ref> 
+		<security-role-ref> <role-name>power-user</role-name> </security-role-ref> 
+		<security-role-ref> <role-name>user</role-name> </security-role-ref> </portlet> -->
 	<portlet>
 		<portlet-name>mvc-portlet01</portlet-name>
 		<display-name>Mvc Portlet01</display-name>
-		<portlet-class>com.test.MVCPortlet01</portlet-class>
+		<portlet-class>com.test.MVCPortlet01</portlet-class>		
 		<init-param>
 			<name>view-jsp</name>
 			<value>/html/mvcportlet01/view.jsp</value>
@@ -105,6 +79,10 @@
 		<init-param>
 			<name>edit-jsp</name>
 			<value>/html/test_portlet_action_url/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>add-process-action-success-action</name>
+			<value>false</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>

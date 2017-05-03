@@ -16,7 +16,7 @@ public class Test_Portlet_Action_URL extends MVCPortlet {
 	public void swName(ActionRequest req, ActionResponse resp) throws PortletModeException {
 
 		String param = ParamUtil.getString(req, "mode", "~");
-		System.out.println(param);
+		// System.out.println(param);
 
 		if (param.equalsIgnoreCase("edit"))
 			resp.setPortletMode(PortletMode.EDIT);
