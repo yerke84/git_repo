@@ -20,6 +20,11 @@ public class MVCPortlet01 extends MVCPortlet {
 		String modeType = httpReq.getParameter("modeType");
 		modeType = modeType != null ? modeType : "VIEW";
 
+		/*
+		 * String ss = ParamUtil.getString(req, "modeType", "");
+		 * System.out.println("modeType = " + ss);
+		 */
+
 		if (modeType.equalsIgnoreCase("EDIT"))
 			resp.setPortletMode(PortletMode.EDIT);
 		else if (modeType.equalsIgnoreCase("HELP"))
