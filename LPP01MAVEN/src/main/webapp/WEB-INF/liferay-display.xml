@@ -7,5 +7,7 @@
 		<portlet id="mvc-portlet01"></portlet>
 		<portlet id="test_-portlet_-action_-url"></portlet>
 		<portlet id="test_-portlet_render-url"></portlet>
+		<portlet id="test_-portlet_-session_-sender"></portlet>
+		<portlet id="test_-portlet_-session_-receiver"></portlet>
 	</category>
 </display>

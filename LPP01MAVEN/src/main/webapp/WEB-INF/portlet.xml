@@ -28,7 +28,7 @@
 	<portlet>
 		<portlet-name>mvc-portlet01</portlet-name>
 		<display-name>Mvc Portlet01</display-name>
-		<portlet-class>com.test.MVCPortlet01</portlet-class>		
+		<portlet-class>com.test.MVCPortlet01</portlet-class>
 		<init-param>
 			<name>view-jsp</name>
 			<value>/html/mvcportlet01/view.jsp</value>
@@ -124,6 +124,72 @@
 		<portlet-info>
 			<title>Test Portlet Render Url</title>
 			<short-title>Test Portlet Render Url</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>test_-portlet_-session_-sender</portlet-name>
+		<display-name>Test Portlet Session Sender</display-name>
+		<portlet-class>com.test.Test_Portlet_Session_Sender</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/test_portlet_session_sender/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>add-process-action-success-action</name>
+			<value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Sender</title>
+			<short-title>Sender</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>test_-portlet_-session_-receiver</portlet-name>
+		<display-name>Test Portlet Session Receiver</display-name>
+		<portlet-class>com.test.Test_Portlet_Session_Receiver</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/test_portlet_session_receiver/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Receiver</title>
+			<short-title>Receiver</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
