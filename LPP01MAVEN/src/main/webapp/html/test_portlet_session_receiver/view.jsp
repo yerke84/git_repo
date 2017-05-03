@@ -2,7 +2,7 @@
 <%@ page import="javax.portlet.PortletSession, java.io.PrintWriter"%>
 
 <portlet:defineObjects />
-<b>Session:</b><br>
+<b>Session (between portlets in one WAR):</b><br>
 <%
 	PortletSession ses = renderRequest.getPortletSession();
 	PrintWriter pw = renderResponse.getWriter();
