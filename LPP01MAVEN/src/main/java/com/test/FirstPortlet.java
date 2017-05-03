@@ -17,16 +17,24 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 public class FirstPortlet extends GenericPortlet {
 
 	private static Log _log = LogFactoryUtil.getLog(FirstPortlet.class);
-	protected String view;
+	protected String viewModeJsp;
+	protected String editModeJsp;
 
 	public void init() {
-		view = getInitParameter("view-jsp");
+		viewModeJsp = getInitParameter("view-jsp");
+		editModeJsp = getInitParameter("edit-jsp");
 	}
 
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 			throws IOException, PortletException {
 
-		include(view, renderRequest, renderResponse);
+		include(viewModeJsp, renderRequest, renderResponse);
+	}
+
+	public void doEdit(RenderRequest renderRequest, RenderResponse renderResponse)
+			throws IOException, PortletException {
+
+		include(editModeJsp, renderRequest, renderResponse);
 	}
 
 	protected void include(String path, RenderRequest renderRequest, RenderResponse renderResponse)

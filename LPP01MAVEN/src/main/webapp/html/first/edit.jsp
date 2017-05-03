@@ -4,4 +4,4 @@
 
 This is the
 <b>First</b>
-portlet in View mode.
+portlet in Edit mode.
