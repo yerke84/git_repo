@@ -51,4 +51,45 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
+	<portlet>
+		<portlet-name>mvc-portlet01</portlet-name>
+		<display-name>Mvc Portlet01</display-name>
+		<portlet-class>com.test.MVCPortlet01</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/mvcportlet01/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/html/mvcportlet01/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>help-jsp</name>
+			<value>/html/mvcportlet01/help.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Mvc Portlet01</title>
+			<short-title>Mvc Portlet01</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
 </portlet-app>
