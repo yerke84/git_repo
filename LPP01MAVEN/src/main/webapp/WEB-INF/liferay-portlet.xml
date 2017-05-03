@@ -18,6 +18,17 @@
 		</footer-portlet-javascript>
 		<css-class-wrapper>mvc-portlet01-portlet</css-class-wrapper>
 	</portlet>
+	<portlet>
+		<portlet-name>test_-portlet_-action_-url</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			test_-portlet_-action_-url-portlet
+		</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>
