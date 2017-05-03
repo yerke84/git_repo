@@ -19,6 +19,8 @@ public class FirstPortlet extends GenericPortlet {
 	private static Log _log = LogFactoryUtil.getLog(FirstPortlet.class);
 	protected String viewModeJsp;
 	protected String editModeJsp;
+	
+	//check git push
 
 	public void init() {
 		viewModeJsp = getInitParameter("view-jsp");
