@@ -74,6 +74,8 @@
 			<portlet-mode>edit</portlet-mode>
 			<portlet-mode>help</portlet-mode>
 		</supports>
+		<supported-locale>ru</supported-locale>
+		<resource-bundle>content.Language</resource-bundle>
 		<portlet-info>
 			<title>Mvc Portlet01</title>
 			<short-title>Mvc Portlet01</short-title>
