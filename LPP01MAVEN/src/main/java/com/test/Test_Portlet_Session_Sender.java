@@ -1,5 +1,8 @@
 package com.test;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletSession;
@@ -15,7 +18,7 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
  */
 public class Test_Portlet_Session_Sender extends MVCPortlet {
 
-	public void myAction(ActionRequest req, ActionResponse resp) {
+	public void myAction(ActionRequest req, ActionResponse resp) throws UnsupportedEncodingException {
 
 		HttpServletRequest httpReq = PortalUtil.getOriginalServletRequest(PortalUtil.getHttpServletRequest(req));
 		String lname = httpReq.getParameter("lname");
@@ -56,9 +59,9 @@ public class Test_Portlet_Session_Sender extends MVCPortlet {
 		resp.setEvent(qName, "Hi, " + lname + " " + fname + "!");
 
 		// set cookie
-		Cookie cookie = new Cookie("myCookieName", "mycookie");// " + lname + " " + fname + ".");
-		cookie.setPath(req.getContextPath());
-		cookie.setVersion(0);
+		Cookie cookie = new Cookie("myCookieName", URLEncoder.encode(lname + " " + fname, "UTF-8"));
+		cookie.setPath("/");
+		cookie.setMaxAge(3600);
 		resp.addProperty(cookie);
 	}
 

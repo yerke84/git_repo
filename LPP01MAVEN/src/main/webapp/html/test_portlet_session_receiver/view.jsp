@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 <%@ page
-	import="javax.portlet.PortletSession, java.io.PrintWriter, javax.servlet.http.Cookie "%>
+	import="javax.portlet.PortletSession, java.io.PrintWriter, javax.servlet.http.Cookie, java.net.URLDecoder "%>
 <script type="text/javascript">
 	Liferay.on('MY_AJAX_EVENT', function(event) {
 		if (event.userData.error == null) {
@@ -46,12 +46,10 @@
 		for (int i = 0; i < cookies.length; i++) {
 			String cn = cookies[i].getName();
 			String cv = cookies[i].getValue();
-			//pw.print(cn + "=" + cv + "<br>");
-			/*
 			if (cn.equalsIgnoreCase("myCookieName")) {
-				pw.print(cv);
+				pw.print(URLDecoder.decode(cv, "UTF-8"));
 			}
-			*/
+
 		}
 	}
 %>

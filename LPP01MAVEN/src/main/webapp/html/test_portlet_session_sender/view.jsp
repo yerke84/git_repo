@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<%@ page
+	import="javax.portlet.PortletSession, java.io.PrintWriter, javax.servlet.http.Cookie "%>
 <script src="http://code.jquery.com/jquery-latest.min.js"
 	type="text/javascript"></script>
 <portlet:defineObjects />
