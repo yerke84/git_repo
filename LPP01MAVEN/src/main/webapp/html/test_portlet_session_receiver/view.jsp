@@ -2,7 +2,7 @@
 <%@ page import="javax.portlet.PortletSession, java.io.PrintWriter"%>
 
 <portlet:defineObjects />
-<b>Application Scope Session:</b>
+<b>1) Portlet Sessions IPC</b>
 <br>
 <%
 	PortletSession ses = renderRequest.getPortletSession();
@@ -11,15 +11,25 @@
 			+ ses.getAttribute("FNAME", PortletSession.APPLICATION_SCOPE));
 	pw.print("<br>");
 %>
-<b>Public Render Parameter:</b>
+<b>2) Public Render Parameters IPC</b>
 <br>
 <%
 	pw.print(renderRequest.getParameter("RP_LNAME") + " " + renderRequest.getParameter("RP_FNAME"));
 	pw.print("<br>");
 %>
-<b>Render Parameter Filled By Event:</b>
+<b>3) IPC Events</b>
 <br>
 <%
 	pw.print(renderRequest.getParameter("PARAM_FROM_EVENT"));
 	pw.print("<br>");
+%>
+<b>4) Client Side IPC with AJAX</b>
+<br>
+<%
+	
+%>
+<b>5) Client Side IPC with Cookies</b>
+<br>
+<%
+	
 %>

@@ -17,7 +17,7 @@ public class Test_Portlet_Session_Receiver extends MVCPortlet {
 	public void processEvent(EventRequest req, EventResponse resp) {
 		Event ev = req.getEvent();
 		String ss = (String) ev.getValue();
-		System.out.println("{Event_Value} = " + ss);
+		//System.out.println("{Event_Value} = " + ss);
 		resp.setRenderParameter("PARAM_FROM_EVENT", ss);
 	}
 
