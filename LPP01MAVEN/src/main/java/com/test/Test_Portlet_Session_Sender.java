@@ -3,6 +3,7 @@ package com.test;
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.PortletSession;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.namespace.QName;
 
@@ -53,6 +54,12 @@ public class Test_Portlet_Session_Sender extends MVCPortlet {
 		// xmlns:e="http://liferay.com/yerke_events">e:data</qname>
 		QName qName = new QName("http://liferay.com/yerke_events", "data", "e");
 		resp.setEvent(qName, "Hi, " + lname + " " + fname + "!");
+
+		// set cookie
+		Cookie cookie = new Cookie("myCookieName", "mycookie");// " + lname + " " + fname + ".");
+		cookie.setPath(req.getContextPath());
+		cookie.setVersion(0);
+		resp.addProperty(cookie);
 	}
 
 }

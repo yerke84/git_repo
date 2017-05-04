@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
-<%@ page import="javax.portlet.PortletSession, java.io.PrintWriter"%>
+<%@ page
+	import="javax.portlet.PortletSession, java.io.PrintWriter, javax.servlet.http.Cookie "%>
 <script type="text/javascript">
 	Liferay.on('MY_AJAX_EVENT', function(event) {
 		if (event.userData.error == null) {
@@ -35,9 +36,22 @@
 <b>4) Client Side IPC with AJAX</b>
 <br>
 <p id="pid"></p>
-<input type="text" id="iid" /><br>
+<input type="text" id="iid" />
+<br>
 <b>5) Client Side IPC with Cookies</b>
 <br>
 <%
-	
+	Cookie[] cookies = renderRequest.getCookies();
+	if (cookies != null) {
+		for (int i = 0; i < cookies.length; i++) {
+			String cn = cookies[i].getName();
+			String cv = cookies[i].getValue();
+			//pw.print(cn + "=" + cv + "<br>");
+			/*
+			if (cn.equalsIgnoreCase("myCookieName")) {
+				pw.print(cv);
+			}
+			*/
+		}
+	}
 %>

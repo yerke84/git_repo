@@ -5,14 +5,16 @@
 
 <portlet:actionURL name="myAction" var="myVar">
 </portlet:actionURL>
-
+<p>
+	<b>For Server Side IPC (Session | Render Parameter | Events)</b>
+</p>
 <form action="<%=myVar%>" method="POST">
 	Last Name: <input type="text" name="lname" /><br> First Name: <input
 		type="text" name="fname" /><br> <input type="submit" name="sb"
 		value="Send" />
 </form>
 <p>
-	<b>For Client Side IPC with AJAX</b>
+	<b>For Client Side IPC (AJAX | Cookie)</b>
 </p>
 <form>
 	Some text: <input type="text" id="mytext" /><br> <input

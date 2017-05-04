@@ -8,13 +8,14 @@ $(document).ready(function() {
 
 		// alert(txt);
 
+		// ajax events
 		Liferay.fire('MY_AJAX_EVENT', {
 			userData : {
 				Text : txt,
 				Time : n
 			}
 		});
-
+		
 	});
 
 });
