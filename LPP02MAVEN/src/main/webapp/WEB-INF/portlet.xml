@@ -1,42 +1,13 @@
 <?xml version="1.0"?>
 
-<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
-	<portlet>
-		<portlet-name>LPP02MAVEN</portlet-name>
-		<display-name>LPP02MAVEN</display-name>
-		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
-		<init-param>
-			<name>view-template</name>
-			<value>/view.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-		</supports>
-		<portlet-info>
-			<title>LPP02MAVEN</title>
-			<short-title>LPP02MAVEN</short-title>
-			<keywords>LPP02MAVEN</keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
 	<portlet>
 		<portlet-name>newReceiver</portlet-name>
 		<display-name>NewReceiver</display-name>
-		<portlet-class>
-			com.liferay.util.bridges.mvc.MVCPortlet
-		</portlet-class>
+		<portlet-class>test.ReceiverPortlet</portlet-class>
 		<init-param>
 			<name>view-jsp</name>
 			<value>/html/newreceiver/view.jsp</value>
@@ -47,8 +18,8 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>NewReceiver</title>
-			<short-title>NewReceiver</short-title>
+			<title>Receiver (WAR TWO)</title>
+			<short-title>Receiver (WAR TWO)</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
@@ -63,5 +34,30 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+
+		<supported-processing-event>
+			<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		</supported-processing-event>
+
+		<supported-processing-event>
+			<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		</supported-processing-event>
+
 	</portlet>
+
+	<event-definition>
+		<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+
+	<public-render-parameter>
+		<identifier>RP_LNAME</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:RP_LNAME</qname>
+	</public-render-parameter>
+
+	<public-render-parameter>
+		<identifier>RP_FNAME</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:RP_FNAME</qname>
+	</public-render-parameter>
+
 </portlet-app>
