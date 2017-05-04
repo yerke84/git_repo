@@ -24,6 +24,10 @@ public class Test_Portlet_Session_Sender extends MVCPortlet {
 		PortletSession ps = req.getPortletSession();
 		ps.setAttribute("LNAME", lname, PortletSession.APPLICATION_SCOPE);
 		ps.setAttribute("FNAME", fname, PortletSession.APPLICATION_SCOPE);
+
+		//
+		resp.setRenderParameter("RP_LNAME", lname);
+		resp.setRenderParameter("RP_FNAME", fname);
 	}
 
 }
