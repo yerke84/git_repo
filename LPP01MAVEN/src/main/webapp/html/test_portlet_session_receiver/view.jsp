@@ -2,7 +2,7 @@
 <%@ page import="javax.portlet.PortletSession, java.io.PrintWriter"%>
 
 <portlet:defineObjects />
-<b>Session (between portlets in one WAR):</b>
+<b>Application Scope Session:</b>
 <br>
 <%
 	PortletSession ses = renderRequest.getPortletSession();
@@ -11,7 +11,7 @@
 			+ ses.getAttribute("FNAME", PortletSession.APPLICATION_SCOPE));
 	pw.print("<br>");
 %>
-<b>RenderParameter:</b>
+<b>Public Render Parameter:</b>
 <br>
 <%
 	pw.print(renderRequest.getParameter("RP_LNAME") + " " + renderRequest.getParameter("RP_FNAME"));

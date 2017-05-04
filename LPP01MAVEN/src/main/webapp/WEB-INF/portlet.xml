@@ -157,8 +157,8 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Sender</title>
-			<short-title>Sender</short-title>
+			<title>Sender (WAR ONE)</title>
+			<short-title>Sender (WAR ONE)</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
@@ -173,6 +173,10 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+
+		<supported-public-render-parameter>RP_LNAME</supported-public-render-parameter>
+		<supported-public-render-parameter>RP_FNAME</supported-public-render-parameter>
+
 	</portlet>
 	<portlet>
 		<portlet-name>test_-portlet_-session_-receiver</portlet-name>
@@ -188,8 +192,8 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Receiver</title>
-			<short-title>Receiver</short-title>
+			<title>Receiver (WAR ONE)</title>
+			<short-title>Receiver (WAR ONE)</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
@@ -204,5 +208,20 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+
+		<supported-public-render-parameter>RP_LNAME</supported-public-render-parameter>
+		<supported-public-render-parameter>RP_FNAME</supported-public-render-parameter>
+
 	</portlet>
+
+	<public-render-parameter>
+		<identifier>RP_LNAME</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:RP_LNAME</qname>
+	</public-render-parameter>
+
+	<public-render-parameter>
+		<identifier>RP_FNAME</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:RP_FNAME</qname>
+	</public-render-parameter>
+
 </portlet-app>
