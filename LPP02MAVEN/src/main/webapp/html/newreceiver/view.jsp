@@ -4,7 +4,7 @@
 <script type="text/javascript">
 	Liferay.on('MY_AJAX_EVENT', function(event) {
 		if (event.userData.error == null) {
-			//alert(event.userData.Text + "|" + event.userData.Time);
+			//--alert(event.userData.Text + "|" + event.userData.Time);
 			document.getElementById('pid2').innerHTML = event.userData.Time;
 			document.getElementById('iid2').value = event.userData.Text;
 		}
