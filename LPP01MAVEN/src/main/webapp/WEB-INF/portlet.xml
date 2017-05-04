@@ -139,6 +139,7 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
+
 	<portlet>
 		<portlet-name>test_-portlet_-session_-sender</portlet-name>
 		<display-name>Test Portlet Session Sender</display-name>
@@ -173,6 +174,12 @@
 		<security-role-ref>
 			<role-name>user</role-name>
 		</security-role-ref>
+
+		<!-- Event settings in sender portlet, !!! this setting must be after "security-role-ref" -->
+		<supported-publishing-event>
+			<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		</supported-publishing-event>
+		<!-- -->
 
 		<supported-public-render-parameter>RP_LNAME</supported-public-render-parameter>
 		<supported-public-render-parameter>RP_FNAME</supported-public-render-parameter>
@@ -209,10 +216,24 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 
+		<!-- Event settings in receiver portlet, !!! this setting must be after 
+			"security-role-ref" -->
+		<supported-processing-event>
+			<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		</supported-processing-event>
+		<!-- -->
+
 		<supported-public-render-parameter>RP_LNAME</supported-public-render-parameter>
 		<supported-public-render-parameter>RP_FNAME</supported-public-render-parameter>
 
 	</portlet>
+
+	<!-- Event settings in sender and receiver portlet-app -->
+	<event-definition>
+		<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<!-- -->
 
 	<public-render-parameter>
 		<identifier>RP_LNAME</identifier>

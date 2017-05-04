@@ -17,3 +17,9 @@
 	pw.print(renderRequest.getParameter("RP_LNAME") + " " + renderRequest.getParameter("RP_FNAME"));
 	pw.print("<br>");
 %>
+<b>Render Parameter Filled By Event:</b>
+<br>
+<%
+	pw.print(renderRequest.getParameter("PARAM_FROM_EVENT"));
+	pw.print("<br>");
+%>
