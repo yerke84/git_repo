@@ -45,6 +45,37 @@
 
 	</portlet>
 
+	<portlet>
+		<portlet-name>test_-call_-w-s_</portlet-name>
+		<display-name>Test Call W S</display-name>
+		<portlet-class>com.test.Test_Call_WS_Portlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/test_call_ws_/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Test Call W S</title>
+			<short-title>Test Call W S</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
 	<event-definition>
 		<qname xmlns:e="http://liferay.com/yerke_events">e:data</qname>
 		<value-type>java.lang.String</value-type>
@@ -59,5 +90,6 @@
 		<identifier>RP_FNAME</identifier>
 		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:RP_FNAME</qname>
 	</public-render-parameter>
+
 
 </portlet-app>
