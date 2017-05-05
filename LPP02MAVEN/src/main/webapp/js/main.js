@@ -22,12 +22,7 @@ $(document)
 									});
 
 					function OnSuccess2(data, textStatus, jqXHR) {
-						var ss = data;
-						ss = ss.replace("City", "td");
-						ss = ss.replace("Country", "td");
-						ss = ss.replace("Table", "tr");
-						ss = ss.replace("NewDataSet", "table");
-						document.getElementById('pid2').innerHTML = ss;
+						document.getElementById('pid2').innerHTML = data;
 					}
 
 					function OnError2(jqXHR, textStatus, errorThrown) {
