@@ -8,7 +8,7 @@
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<header-portlet-javascript>/js/react.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/react-dom.js</header-portlet-javascript>
-		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<header-portlet-javascript>/js/JSXTransformer.js</header-portlet-javascript>
 		<css-class-wrapper>calc-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
