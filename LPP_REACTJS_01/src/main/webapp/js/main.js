@@ -1,11 +1,11 @@
-var HelloWorld = React.createClass({
+var MyMainClass = React.createClass({
 
 	render : function() {
-		return React.createElement("h2", null, "Hello World!");
+		return React.createElement("h2", null, "!!Hello World!");
 	},
 
 });
 
-var mydiv = document.getElementById('greeting-div');
-
-ReactDOM.render(React.createElement(HelloWorld), mydiv);
+// final render
+var mydiv = document.getElementById('main_div');
+ReactDOM.render(React.createElement(MyMainClass), mydiv);
