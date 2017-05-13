@@ -18,7 +18,7 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Calculator by React.JS on Liferay Portal</title>
+			<title>Apple Calculator by React.JS on Liferay Portal</title>
 			<short-title>Calc</short-title>
 			<keywords></keywords>
 		</portlet-info>
