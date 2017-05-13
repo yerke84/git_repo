@@ -1,6 +1,6 @@
 var Lander = React.createClass({
     render: function () {
-        var info = "Lorem ipsum dolor sit amet... 111";
+        var info = "1234567890+-/*=c";
         return(
             <div>
                 <div className="info">{info}</div>
