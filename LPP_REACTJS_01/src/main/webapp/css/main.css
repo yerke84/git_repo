@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import
+	url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=cyrillic,cyrillic-ext,latin-ext')
+	;
 
 #main_div {
 	background-color: black;
 	border: 3px solid orange;
-	font-family: 'Great Vibes', cursive;
+	font-family: 'Comfortaa', cursive;
 	color: white;
 }
