@@ -1,18 +1,20 @@
 "use strict"; // этот код будет работать по современному стандарту ES5
 
-var Lander = React.createClass({
-    render: function () {
-        var info = Math.random() + "_--_1234567890+-/*=c";
-        return(
-            <div>
-                <div className="info">{info}</div>
-            </div>
+var Calculator = React.createClass({
+
+	render: function () {
+        var info = "1234567890 C ± + - ÷ × % AC !";
+        return (
+        		
+            <div id="calculator"></div>
+                        
         );
     }
+
 });
 
 
 ReactDOM.render(
-        <Lander />,
+        <Calculator />,
         document.getElementById('main_div')
 );
