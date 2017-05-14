@@ -15,7 +15,7 @@ var Calculator = React.createClass({
         return (
         		
             <div id="calculator">
-            	<div id="result"></div>
+            	<div id="result"><table className="mtable"><tr><td id="result_td">777</td></tr></table></div>
             	<div id="mathtable"><table className="mtable">            	
             		{
             			mymath.map(function(oneRow, i){

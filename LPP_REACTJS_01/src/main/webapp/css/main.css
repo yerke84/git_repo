@@ -4,8 +4,18 @@
 
 #main_div {
 	font-family: 'Comfortaa', cursive;
-	font-size: 20pt;
+	font-size: 18pt;
 	font-weight: bold;
+}
+
+#result_td {
+	width: 209px;
+	border: 1px solid gray;
+	height: 50px;
+	color: white;	
+	background-color: #000000;
+	text-align: right;
+	valign: bottom;
 }
 
 .mtable {
@@ -24,9 +34,9 @@
 
 .myitem_orange {
 	background-color: #f88f12;
-	color:#FFFFFF;
+	color: #FFFFFF;
 }
 
 .nolitem {
-	border-right-style: hidden;	
+	border-right-style: hidden;
 }
