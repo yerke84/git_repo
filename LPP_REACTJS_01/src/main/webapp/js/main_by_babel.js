@@ -7,55 +7,94 @@ var Calculator = React.createClass({
 		return {
 			displayValue: "0",
 			operator:     null,
-			firstValue:   null,
+			prevValue:    null,
 			waitOperator: false
 		};		
 	},
 
 	doMath: function(item){
 		
-		//кнопка C
+		// кнопка C
 		if(item == 'C'){
 			this.setState({
 				displayValue: "0",
 				operator:     null,
-				firstValue:   null,
+				prevValue:    null,
 				waitOperator: false
 			})	
 		}
+		
+		// =
+		if(item == '='){
+			var a = this.state.prevValue;
+			var b = parseFloat(this.state.displayValue);			
+			var o = this.state.operator;
+					
+			if(a && b && o){
+				var r;
+				switch(o) {
+				  case '+': r = a + b; break;
+				  case '-': r = a - b; break;
+				  case '×': r = a * b; break;
+				  case '÷': r = a / b; break;				
+				}
+				this.setState({					
+					displayValue: String(r),
+					operator:     null,
+					prevValue:    null,
+					waitOperator: false
+				})				
+			}	
+		}		
 				
-		//операторы
+		// операторы
 		if(item == '×' || item == '÷' || item == '-' || item == '+'){
-			this.setState({				
+			this.setState({						
 				operator:     item,				
-				waitOperator: true
+				waitOperator: true,
+				prevValue:    parseFloat(this.state.displayValue)
 			})	
 		}
 		
-		//цифры
+		// цифры
 		if(item >=0 && item <=9){
-			this.setState({
-				displayValue: this.state.displayValue == '0' ? String(item) : this.state.displayValue + String(item)
-			})			
+			if(this.state.waitOperator){
+				this.setState({					
+					displayValue: String(item),
+					waitOperator: false
+				})
+			}else{			
+				this.setState({
+					displayValue: this.state.displayValue == '0' ? String(item) : this.state.displayValue + String(item)
+				})
+			}
+			
+			
 		}
 		
-		//dot
+		// dot
 		if(item == '.'){
-			if(this.state.displayValue.indexOf('.') == -1){
+			if(this.state.waitOperator){
+				this.setState({					
+					displayValue: '0' + String(item),
+					waitOperator: false
+				})
+			}else if(this.state.displayValue.indexOf('.') == -1){
 				this.setState({
-					displayValue: this.state.displayValue + String(item)
+					displayValue: this.state.displayValue + String(item),
+					waitOperator: false
 				})				
 			}				
 		}
 		
-		//±
+		// ±
 		if(item == '±'){
 			this.setState({
 				displayValue: this.state.displayValue.charAt(0) == '-' ? this.state.displayValue.substr(1) : '-' + this.state.displayValue
 			})
 		}
 		
-		//%
+		// %
 		if(item == '%'){
 			var value = parseFloat(this.state.displayValue);
 			this.setState({
@@ -104,7 +143,7 @@ var Calculator = React.createClass({
 
 });
 
-//вывод
+// вывод
 ReactDOM.render(
         <Calculator />,
         document.getElementById('main_div')
