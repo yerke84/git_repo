@@ -1,42 +1,36 @@
-@import
-	url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=cyrillic,cyrillic-ext,latin-ext')
-	;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-#main_div {
-	font-family: 'Comfortaa', cursive;
-	font-size: 18pt;
-	font-weight: bold;
-}
-
-#result_td {
-	width: 209px;
-	border: 1px solid gray;
+#display_div {
+	width: 200px;
 	height: 50px;
-	color: white;	
-	background-color: #000000;
+	border: 1px solid gray;
 	text-align: right;
-	valign: bottom;
+	vertical-align: bottom;
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: white;
 }
 
-.mtable {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.myitem {
+.btn {
 	width: 50px;
 	height: 50px;
 	border: 1px solid gray;
 	text-align: center;
 	valign: middle;
 	background-color: #c4c5c9;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: black;
 }
 
-.myitem_orange {
+.nbtn {
+	width: 100px;
+}
+
+.obtn {
 	background-color: #f88f12;
 	color: #FFFFFF;
-}
-
-.nolitem {
-	border-right-style: hidden;
 }

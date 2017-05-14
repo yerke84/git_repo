@@ -2,6 +2,19 @@
 
 var Calculator = React.createClass({
 
+	// исходные данные
+	getInitialState: function() {
+		return {
+			displayValue: "0"
+		};		
+	},
+
+	doMath: function(item){		
+		console.log(item);
+	},
+	
+	
+	// отрисовка
 	render: function () {
 		
 		var mymath = [
@@ -9,29 +22,30 @@ var Calculator = React.createClass({
 			[7, 8, 9, "×"],
 			[4, 5, 6, "-"],
 			[1, 2, 3, "+"],
-			[0, "", ",", "="]
+			[0, ",", "="]
 		];
 	
         return (
         		
-            <div id="calculator">
-            	<div id="result"><table className="mtable"><tr><td id="result_td">777</td></tr></table></div>
-            	<div id="mathtable"><table className="mtable">            	
+            <center><div id="calculator_div">              
+            	<div id="display_div">{this.state.displayValue}</div>
+            	<div id="panel_div">
             		{
             			mymath.map(function(oneRow, i){
             				var items = oneRow.map(function(oneItem, j){            					
             					return(
-            							<td className={
-            									oneItem === 0 ? 'myitem nolitem'
-            											: j == 3 ? 'myitem myitem_orange'
-            													: 'myitem'}>{oneItem}</td>
+            							<button
+            								onClick={this.doMath.bind(null, oneItem)}
+            								className={oneItem == 0 ? 'btn nbtn' : j == 3 || oneItem == '=' ? 'btn obtn' : 'btn'}>
+            								{oneItem}
+            							</button>
             					);            					
-            				});
-            				return (<tr className="myrow">{items}</tr>);            			
-            			})            		
+            				}.bind(this));
+            				return (<div>{items}</div>);            			
+            			}.bind(this))            		
             		}            		
-            	</table></div>            
-            </div>
+            	</div>
+            </div></center>
                         
         );
     }
