@@ -13,7 +13,7 @@
 	color: white;
 }
 
-.btn {
+button.btn {
 	width: 50px;
 	height: 50px;
 	border: 1px solid gray;
@@ -26,11 +26,28 @@
 	color: black;
 }
 
-.nbtn {
+button.nbtn {
 	width: 100px;
+	height: 50px;
+	border: 1px solid gray;
+	text-align: center;
+	valign: middle;
+	background-color: #c4c5c9;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: black;
 }
 
-.obtn {
+button.obtn {
+	width: 50px;
+	height: 50px;
+	border: 1px solid gray;
+	text-align: center;
+	valign: middle;
 	background-color: #f88f12;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
 	color: #FFFFFF;
 }
