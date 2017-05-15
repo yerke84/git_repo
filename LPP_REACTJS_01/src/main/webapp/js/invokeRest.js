@@ -1,3 +1,5 @@
+"use strict";
+
 var InvokeRestClass = React.createClass({
 
 	getInitialState: function() {
@@ -14,31 +16,19 @@ var InvokeRestClass = React.createClass({
 			this.setState({
 				result: "Please, enter country name."  
 			})
-		} else {			
+		} else {
+			//необходимо для браузера установить расширение CORS - Access-Control-Allow-Origin
 			var webServiceURL = 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry?CountryName=' + ss;
-			jquery.ajax({			
-				url : webServiceURL,
-				type : "GET",
-				dataType : "text",
-				success : OnSuccess,
-				error : OnError
-			});
+						
+			axios.get(webServiceURL).then(function(response){
+					this.setState({result: response});				
+			    }).catch(function(error){
+			    	this.setState({result: error});
+			    });
 		}
 		
 	},
-	
-	OnSuccess: function(data, textStatus, jqXHR) {		
-		this.setState({
-			result: data  
-		})
-	},
-	
-	OnError: function(jqXHR, textStatus, errorThrown) {
-		this.setState({
-			result: jqXHR.status + ": " + jqXHR.statusText  
-		})
-	},
-	
+		
 	handleChange(event) {
 	    this.setState({
 	    	enteredValue: event.target.value
