@@ -9,16 +9,33 @@ var InvokeRestClass = React.createClass({
 	
 	getCities: function() {
 	
-		var ss = this.state.enteredValue.trim();
-		var rr;
+		var ss = this.state.enteredValue.trim();		
 		if(!ss) {
-			rr = "Please, enter country name."
-		} else {
-			rr = "{" + ss + "}"
+			this.setState({
+				result: "Please, enter country name."  
+			})
+		} else {			
+			var webServiceURL = 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry?CountryName=' + ss;
+			jquery.ajax({			
+				url : webServiceURL,
+				type : "GET",
+				dataType : "text",
+				success : OnSuccess,
+				error : OnError
+			});
 		}
 		
+	},
+	
+	OnSuccess: function(data, textStatus, jqXHR) {		
 		this.setState({
-			result: rr  
+			result: data  
+		})
+	},
+	
+	OnError: function(jqXHR, textStatus, errorThrown) {
+		this.setState({
+			result: jqXHR.status + ": " + jqXHR.statusText  
 		})
 	},
 	

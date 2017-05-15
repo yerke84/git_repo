@@ -17,7 +17,8 @@
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<header-portlet-javascript>/js/react.min.js</header-portlet-javascript> <!-- подключаем библиотеку реакт -->
 		<header-portlet-javascript>/js/react-dom.min.js</header-portlet-javascript> <!-- подключаем библиотеку реакт дом -->
-		<header-portlet-javascript>/js/browser.min.js</header-portlet-javascript> <!-- подключаем библиотеку для babel -->		
+		<header-portlet-javascript>/js/browser.min.js</header-portlet-javascript> <!-- подключаем библиотеку для babel -->
+		<header-portlet-javascript>/js/jquery-latest.min.js</header-portlet-javascript> <!-- подключаем библиотеку jQuery -->
 		<css-class-wrapper>invoke-rest-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
