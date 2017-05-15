@@ -18,20 +18,25 @@ var InvokeRestClass = React.createClass({
 			})
 		} else {
 			var webServiceURL = 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry?CountryName=' + ss;
-						
+			
+			
+			/*
 			$.ajax({
 				url : webServiceURL,
 				type : "GET",
 				dataType : "jsonp",
-				crossDomain: true,
-				success : function(data){
-					this.setState({result: String(data)});
-					console.log(data);
-				}.bind(this),
-				error : function(jqXHR, textStatus, errorThrown){
-					this.setState({result: jqXHR.status + ": " + jqXHR.statusText})					
+				crossDomain: true,				
+				success : function(resp){					
+					this.setState({result: String(resp)});					
+				}.bind(this),				
+				error : function(error){
+					console.log(error.status);					
+					console.log(error.statusText);
+					console.log(error.string);
+					//this.setState({result: jqXHR.status + ": " + jqXHR.statusText});					
 				}.bind(this)
 			});
+			*/
 		}
 		
 	},

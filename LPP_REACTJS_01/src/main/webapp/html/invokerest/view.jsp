@@ -5,7 +5,7 @@
 <%
 	/* для предотвращения кэширования подключенного js файла, актуально при разработке, на проде можно убрать */
 	Random rand = new Random();
-	int vrsn = rand.nextInt(1000) + 1;
+	int vrsn = rand.nextInt(10000) + 1;
 %>
 
 <portlet:defineObjects />
