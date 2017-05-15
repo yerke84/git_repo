@@ -17,14 +17,21 @@ var InvokeRestClass = React.createClass({
 				result: "Please, enter country name."  
 			})
 		} else {
-			//необходимо для браузера установить расширение CORS - Access-Control-Allow-Origin
 			var webServiceURL = 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry?CountryName=' + ss;
 						
-			axios.get(webServiceURL).then(function(response){
-					this.setState({result: response});				
-			    }).catch(function(error){
-			    	this.setState({result: error});
-			    });
+			$.ajax({
+				url : webServiceURL,
+				type : "GET",
+				dataType : "jsonp",
+				crossDomain: true,
+				success : function(data){
+					this.setState({result: String(data)});
+					console.log(data);
+				}.bind(this),
+				error : function(jqXHR, textStatus, errorThrown){
+					this.setState({result: jqXHR.status + ": " + jqXHR.statusText})					
+				}.bind(this)
+			});
 		}
 		
 	},
@@ -40,7 +47,7 @@ var InvokeRestClass = React.createClass({
 		  <div>
 		  	<p>
 		  		<font className="cntryFnt">Country: </font>
-		  		<input type="text" value={this.state.enteredValue} onChange={this.handleChange} className="listFnt cntryBorder"></input>
+		  		<input type="text" value={this.state.enteredValue} onChange={this.handleChange} id="inputClassFnt"></input>
 		  		&nbsp;
 		  		<button className="searchBtn" onClick={this.getCities.bind()}>Get Cities List</button>
 		  	</p>

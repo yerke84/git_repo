@@ -49,7 +49,7 @@
 			<portlet-mode>view</portlet-mode>			
 		</supports>
 		<portlet-info>
-			<title>Invoke Rest by React JS</title>
+			<title>Invoke Rest WS by React JS</title>
 			<short-title>Invoke Rest</short-title>
 			<keywords></keywords>
 		</portlet-info>

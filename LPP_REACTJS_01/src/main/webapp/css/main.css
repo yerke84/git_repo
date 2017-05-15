@@ -65,11 +65,14 @@ button.obtn {
 	color: #f88f12;
 }
 
-.cntryBorder {
+#inputClassFnt {
 	border: 1px solid #f88f12;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;	
+	color: #f88f12;
 }
 
-.searchBtn{
+button.searchBtn{
 	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
