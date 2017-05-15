@@ -19,5 +19,5 @@
 	 указать тип скрипта - "text/babel"
  -->
 <script
-	src="<%=request.getContextPath()%>/js/main_by_babel.js?v=<%=vrsn%>"
+	src="<%=request.getContextPath()%>/js/calc.js?v=<%=vrsn%>"
 	type="text/babel"></script>
