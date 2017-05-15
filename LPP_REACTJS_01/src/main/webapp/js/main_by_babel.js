@@ -127,7 +127,7 @@ var Calculator = React.createClass({
             					return(
             							<button
             								onClick={this.doMath.bind(null, oneItem)}
-            								className={oneItem == 0 ? 'nbtn' : j == 3 || oneItem == '=' ? 'obtn' : 'btn'}>
+            								className={oneItem == 0 ? 'nbtn' : j == 3 || oneItem == '=' ? 'obtn' : 'sbtn'}>
             								{oneItem}
             							</button>
             					);            					
