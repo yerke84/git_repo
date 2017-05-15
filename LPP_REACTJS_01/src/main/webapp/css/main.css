@@ -51,3 +51,28 @@ button.obtn {
 	font-weight: bold;
 	color: #FFFFFF;
 }
+
+.cntryFnt {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #f88f12;
+}
+
+.listFnt {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;	
+	color: #f88f12;
+}
+
+.cntryBorder {
+	border: 1px solid #f88f12;
+}
+
+.searchBtn{
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #f88f12;
+	border: 1px solid #f88f12;	
+}
