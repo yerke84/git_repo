@@ -18,5 +18,5 @@
 	 с помощью тега <footer-portlet-javascript>, но данный тег не позволяет
 	 указать тип скрипта - "text/babel"
  -->
-<script src="<%=request.getContextPath()%>/js/invokeRest.js?v=<%=vrsn%>"
+ <script src="<%=request.getContextPath()%>/js/invokeRest.js?v=<%=vrsn%>"
 	type="text/babel"></script>

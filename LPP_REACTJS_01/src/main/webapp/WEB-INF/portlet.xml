@@ -45,8 +45,8 @@
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
-			<mime-type>text/html</mime-type>
-			<portlet-mode>view</portlet-mode>
+			<mime-type>text/html</mime-type>			
+			<portlet-mode>view</portlet-mode>			
 		</supports>
 		<portlet-info>
 			<title>Invoke Rest by React JS</title>
