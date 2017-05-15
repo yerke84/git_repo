@@ -24,19 +24,21 @@ var Calculator = React.createClass({
 			})	
 		}
 		
+		if(this.state.displayValue == 'Ошибка')return;
+		
 		// =
 		if(item == '='){
 			var a = this.state.prevValue;
 			var b = parseFloat(this.state.displayValue);			
 			var o = this.state.operator;
 					
-			if(a && b && o){
+			if(!isNaN(a) && !isNaN(b) && o){
 				var r;
 				switch(o) {
 				  case '+': r = a + b; break;
 				  case '-': r = a - b; break;
 				  case '×': r = a * b; break;
-				  case '÷': r = a / b; break;				
+				  case '÷': if(b==0){r='Ошибка';}else{r = a / b;}break;				
 				}
 				this.setState({					
 					displayValue: String(r),
