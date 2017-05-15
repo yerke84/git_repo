@@ -62,7 +62,7 @@ button.obtn {
 .listFnt {
 	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;	
-	color: #f88f12;
+	<!--color: #f88f12;-->
 }
 
 #inputClassFnt {
