@@ -11,6 +11,15 @@
 		<header-portlet-javascript>/js/browser.min.js</header-portlet-javascript> <!-- подключаем библиотеку для babel -->
 		<css-class-wrapper>calc-portlet</css-class-wrapper>
 	</portlet>
+	<portlet>
+		<portlet-name>invoke-rest</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>invoke-rest-portlet</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>

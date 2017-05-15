@@ -4,5 +4,6 @@
 <display>
 	<category name="category.sample">
 		<portlet id="calc"></portlet>
+		<portlet id="invoke-rest"></portlet>
 	</category>
 </display>
