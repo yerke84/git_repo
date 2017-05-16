@@ -26,7 +26,7 @@ var MyTimer = React.createClass({
 	// вызов сервиса
 	invokeWS: function(){
 		// REST JERSEY сервис, который возвращает случайные числа
-		var webServiceURL = 'http://localhost:8081/WS_SYNC_REST_JERSEY_MAVEN_MYSQL/link_in_web_xml/ws_test_class/get_random';
+		var webServiceURL = 'http://localhost:8080/DWP_FOR_LR/link_in_web_xml/test_rest_class/get_random';
 		
 		$.ajax({
 			url : webServiceURL,				
