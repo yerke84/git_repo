@@ -2,6 +2,7 @@ package test;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
+import java.util.Random;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,6 +15,14 @@ import setting.MySqlClass;
 
 @Path("/ws_test_class")
 public class WS_REST_JERSEY_SERVICE_CLASS {
+	
+	@GET
+	@Path("/get_random")
+	public String getRandom() {
+		Random r = new Random();
+		int i = r.nextInt(1000);
+		return String.valueOf(i);
+	}
 
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
