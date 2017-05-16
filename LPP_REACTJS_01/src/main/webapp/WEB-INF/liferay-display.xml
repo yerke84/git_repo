@@ -5,5 +5,6 @@
 	<category name="category.sample">
 		<portlet id="calc"></portlet>
 		<portlet id="invoke-rest"></portlet>
+		<portlet id="timer"></portlet>
 	</category>
 </display>
