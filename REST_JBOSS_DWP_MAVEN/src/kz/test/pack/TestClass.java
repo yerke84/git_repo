@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -27,6 +28,14 @@ import data.UserListClass;
 @Path("/testclass")
 
 public class TestClass {
+
+	@GET
+	@Path("/get_random")
+	public String getRandom() {
+		Random r = new Random();
+		int i = r.nextInt(1000);
+		return String.valueOf(i);
+	}
 
 	@GET
 	@Path("/get_message_no_type/{lastname}/{firstname}")
