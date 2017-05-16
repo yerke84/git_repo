@@ -61,21 +61,35 @@ button.obtn {
 
 .listFnt {
 	font-family: 'Roboto', sans-serif;
-	font-size: 12pt;	
-	<!--color: #f88f12;-->
+	font-size: 12pt; <!--
+	color: #f88f12;
+	-->
 }
 
 #inputClassFnt {
 	border: 1px solid #f88f12;
 	font-family: 'Roboto', sans-serif;
-	font-size: 12pt;	
+	font-size: 12pt;
 	color: #f88f12;
 }
 
-button.searchBtn{
+button.searchBtn {
 	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
 	color: #f88f12;
-	border: 1px solid #f88f12;	
+	border: 1px solid #f88f12;
+}
+
+.titleFnt {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #f88f12;
+}
+
+.resultFnt {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;	
+	color: black;
 }
