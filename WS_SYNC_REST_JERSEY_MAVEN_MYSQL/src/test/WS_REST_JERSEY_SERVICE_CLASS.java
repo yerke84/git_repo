@@ -15,13 +15,13 @@ import setting.MySqlClass;
 
 @Path("/ws_test_class")
 public class WS_REST_JERSEY_SERVICE_CLASS {
-	
+
 	@GET
 	@Path("/get_random")
-	public String getRandom() {
+	public Response getRandom() {
 		Random r = new Random();
 		int i = r.nextInt(1000);
-		return String.valueOf(i);
+		return Response.ok(String.valueOf(i)).header("Access-Control-Allow-Origin", "*").build();
 	}
 
 	@GET
