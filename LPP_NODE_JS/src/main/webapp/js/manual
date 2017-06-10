@@ -1,3 +1,4 @@
-0) install node js & npm on system
-1) in eclipse right click 'js' folder & select 'Show in - Terminal'
-2) in terminal run command 'npm init -y', this created 'package.json' file
+1) install node js & npm on system
+2) in eclipse right click 'js' folder & select 'Show in - Terminal'
+3) in terminal run command 'npm init -y', this created 'package.json' file
+4) in terminal run command 'npm install babel --save-dev'
