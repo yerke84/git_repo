@@ -1,5 +1,5 @@
 1) install node js & npm on system
 2) in eclipse right click 'js' folder & select 'Show in - Terminal'
 3) in terminal run command 'npm init -y', this created 'package.json' file
-4) in terminal run command 'npm install babel --save-dev'
+4) in terminal run command 'npm install babel-cli  --save-dev'
 5) in terminal run command 'npm install arui-feather --save-dev'
