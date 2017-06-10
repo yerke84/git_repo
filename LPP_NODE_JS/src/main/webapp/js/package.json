@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "arui-feather": "^6.0.0",
     "babel": "^6.23.0"
   }
 }
