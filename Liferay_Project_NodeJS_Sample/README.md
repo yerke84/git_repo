@@ -33,4 +33,5 @@ Do same with <b>src/main/webapp/js/nodejs_dev/public/index.html</b> file<br/>
 23) Open your <b>src/main/webapp/WEB-INF/liferay-portlet.xml</b> file and then correct css, js file addresses for portlet, from <b>src/main/webapp/js/nodejs_dev/build/index.html</b> file<br/>
 In our case:<br/>
 <b>&lt;header-portlet-css&gt;/js/nodejs_dev/build/static/css/main.70da0563.css&lt;/header-portlet-css&gt;<br/>
-&lt;footer-portlet-javascript&gt;/js/nodejs_dev/build/static/js/main.f2884cb2.js&lt;/footer-portlet-javascript&gt;</b>
+&lt;footer-portlet-javascript&gt;/js/nodejs_dev/build/static/js/main.f2884cb2.js&lt;/footer-portlet-javascript&gt;</b><br/>
+25) Deploy liferay portlet project to portal<br/>
