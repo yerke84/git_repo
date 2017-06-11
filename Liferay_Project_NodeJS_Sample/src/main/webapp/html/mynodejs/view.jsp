@@ -1,5 +1,4 @@
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 
 <portlet:defineObjects />
-
-This is the <b>My Node Js</b> portlet in View mode.
+<div id="abb0df2a-3855-4e57-a0a5-f1c68189ac0c"></div>

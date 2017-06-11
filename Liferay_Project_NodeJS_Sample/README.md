@@ -20,3 +20,4 @@ Do same with <b>src/main/webapp/js/nodejs_dev/public/index.html</b> file<br/>
 19) Open address <b>http://localhost:3000/</b> and test a page<br/>
 20) In terminal run command <b>Ctrl+C</b> to stop server<br>
 21) In terminal run command <b>npm run build</b> to bundle the app into static files for production<br>
+22) After building open <b>src/main/webapp/js/nodejs_dev/build/index.html</b> file, copy from there 'div' tag (sample <b>&lt;div id="abb0df2a-3855-4e57-a0a5-f1c68189ac0c"&gt;&lt;/div&gt;</b>) and paste it to portlet jsp file (in our case <b>src/main/webapp/html/mynodejs/view.jsp</b> file) after tag <b>&lt;portlet:defineObjects /&gt;</b><br/>
