@@ -5,10 +5,8 @@
 	<portlet>
 		<portlet-name>my-node-js</portlet-name>
 		<icon>/icon.png</icon>
-		<header-portlet-css>/css/main.css</header-portlet-css>
-		<footer-portlet-javascript>
-			/js/main.js
-		</footer-portlet-javascript>
+		<header-portlet-css>/js/nodejs_dev/build/static/css/main.70da0563.css</header-portlet-css>
+		<footer-portlet-javascript>/js/nodejs_dev/build/static/js/main.f2884cb2.js</footer-portlet-javascript>
 		<css-class-wrapper>my-node-js-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>

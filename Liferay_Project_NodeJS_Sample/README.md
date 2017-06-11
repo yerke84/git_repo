@@ -21,3 +21,7 @@ Do same with <b>src/main/webapp/js/nodejs_dev/public/index.html</b> file<br/>
 20) In terminal run command <b>Ctrl+C</b> to stop server<br>
 21) In terminal run command <b>npm run build</b> to bundle the app into static files for production<br>
 22) After building open <b>src/main/webapp/js/nodejs_dev/build/index.html</b> file, copy from there 'div' tag (sample <b>&lt;div id="abb0df2a-3855-4e57-a0a5-f1c68189ac0c"&gt;&lt;/div&gt;</b>) and paste it to portlet jsp file (in our case <b>src/main/webapp/html/mynodejs/view.jsp</b> file) after tag <b>&lt;portlet:defineObjects /&gt;</b><br/>
+23) Open your <b>src/main/webapp/WEB-INF/liferay-portlet.xml</b> file and then correct css, js file addresses for portlet, from <b>src/main/webapp/js/nodejs_dev/build/index.html</b> file<br/>
+In our case:<br/>
+<b>&lt;header-portlet-css&gt;/js/nodejs_dev/build/static/css/main.70da0563.css&lt;/header-portlet-css&gt;<br/>
+&lt;footer-portlet-javascript&gt;/js/nodejs_dev/build/static/js/main.f2884cb2.js&lt;/footer-portlet-javascript&gt;</b>
