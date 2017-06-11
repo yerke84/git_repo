@@ -13,4 +13,4 @@
 13) In terminal run command <b>create-react-app nodejs_dev</b> and wait a while<br/>
 14) In terminal run command <b>cd nodejs_dev</b> to go to node js project folder<br/>
 15) In terminal run command <b>npm install arui-feather --save-dev</b> to go to node js project folder<br/>
-
+16) In eclipse open <b>/src/main/webapp/js/nodejs_dev/src/App.js</b> file for edit<br/>
