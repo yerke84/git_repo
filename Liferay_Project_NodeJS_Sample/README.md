@@ -5,7 +5,16 @@
 5) Share this project into git (Right click on project - Team - Share Project)<br/>
 6) Commit & Push project periodically<br/>
 7) Create 'README.md' file in project root, if it needs (you may use it for instructions list, like this)<br/>
-8) Add <b>/node_modules/</b> entry to <b>.gitignore</b> file<br/>
+8) Add <b>/node_modules/</b> entry to <b>.gitignore</b> file to ignore this folder by git<br/>
+and to ignore this folder by WAR export add next plugin to pom.xml:<br><br/>
+&lt;plugin&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;version&gt;2.1&lt;/version&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;configuration&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;warSourceExcludes&gt;node_modules/**&lt;/warSourceExcludes&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/configuration&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/plugin&gt;<br/><br/>
 9) Right click folder '/src/main/webapp/js' &  select 'Show In - Terminal'<br/>
 10) In terminal authorize as root<br/>
 11) In terminal run command <b>npm install -g create-react-app</b><br/>
