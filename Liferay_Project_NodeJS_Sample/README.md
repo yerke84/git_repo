@@ -12,5 +12,5 @@
 12) In terminal run command <b>exit</b> to log out for root<br/>
 13) In terminal run command <b>create-react-app nodejs_dev</b> and wait a while<br/>
 14) In terminal run command <b>cd nodejs_dev</b> to go to node js project folder<br/>
-
+15) In terminal run command <b>npm install arui-feather --save-dev</b> to go to node js project folder<br/>
 
