@@ -8,4 +8,5 @@
 8) Right click folder '/src/main/webapp/js' &  select 'Show In - Terminal'<br/>
 9) In terminal authorize as root<br/>
 10) In terminal run command <b>npm install -g create-react-app</b><br/>
-
+11) In terminal run command <b>exit</b> to log out for root<br/>
+11) In terminal run command <b>create-react-app nodejs_dev</b> and wait a while<br/>
