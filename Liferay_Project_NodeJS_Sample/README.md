@@ -14,7 +14,8 @@
 14) In terminal run command <b>cd nodejs_dev</b> to go to node js project folder<br/>
 15) In terminal run command <b>npm install arui-feather --save-dev</b> to go to node js project folder<br/>
 16) In eclipse open <b>/src/main/webapp/js/nodejs_dev/src/App.js</b> file for edit, here add your nodejs & reactJs code<br/>
-17) In eclipse open <b>/src/main/webapp/js/nodejs_dev/src/index.js</b> file for edit, here change document Element Id to your own (default value is <b>root</b>), for example to unique GUID (https://guidgenerator.com/)<br/>
+17) In eclipse open <b>/src/main/webapp/js/nodejs_dev/src/index.js</b> file for edit, here change document Element Id to your own (default value is <b>root</b>), for example to unique GUID (https://guidgenerator.com/).
+Do same with <b>src/main/webapp/js/nodejs_dev/public/index.html</b> file<br/> 
 18) Return to terminal and run comman <b>npm start</b> to test code<br/>
 19) Open address <b>http://localhost:3000/</b> and test a page<br/>
 20) In terminal run command <b>Ctrl+C</b> to stop server<br>
