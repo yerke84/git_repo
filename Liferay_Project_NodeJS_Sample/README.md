@@ -5,3 +5,4 @@
 5) Share this project into git (Right click on project - Team - Share Project)<br/>
 6) Commit & Push project periodically<br/>
 7) Create 'README.md' file in project root, if it needs (you may use it for instructions list, like this)<br/>
+8)
